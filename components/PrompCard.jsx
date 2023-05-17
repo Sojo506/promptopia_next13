@@ -23,7 +23,7 @@ const PrompCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
         <div
           className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
           onClick={() => {
-            if (session.user.email !== post.creator.email) {
+            if (session?.user.email !== post.creator.email) {
               router.push(
                 `/profile/${post.creator._id}/?name=${post.creator.username}`
               );
